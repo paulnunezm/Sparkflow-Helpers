@@ -108,9 +108,11 @@ var _SparkFlowVideoHelper = function (sparkflow) {
     };
 
     var runDefaulVideoExitAnimation = function () {
-        setVisible();
-        TweenMax.set(videoContainer, {x: 0});
-        TweenMax.to(videoContainer, 0.5, {x: 0, opacity: 1});
+        TweenMax.to(videoContainer, 0.5, {x: 0, opacity: 1,
+            onComplete: function () {
+                hideVideo();
+            }
+        });
     };
 
     var runCustomEnterAnimation = function (customAnimationCallback) {
