@@ -84,8 +84,10 @@ var _SparkflowVideoHelper = function (sparkflow) {
     };
 
     var hideVideoWhenMobileRotates = function () {
-        if (visible) _this.pause();
-        hideVideo();
+        if (visible){
+            _this.pause();
+            hideVideo();
+        }
     };
 
     var showVideoWhenMobileRotates = function () {
