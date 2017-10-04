@@ -4,7 +4,7 @@
  * Needs an initialized sparkflow object. To handle the set and unset
  * of the autoclose and to be able to use Device.js.
  */
-var _SparkFlowVideoHelper = function (sparkflow) {
+var _SparkflowVideoHelper = function (sparkflow) {
     var video = null,
         videoContainer = null,
         added = false,
