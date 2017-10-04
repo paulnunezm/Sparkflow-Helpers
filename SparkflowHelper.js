@@ -346,7 +346,9 @@ var _SparkflowHelper = function () {
         mraid.cancelAutoClose();
     };
 
-    this.hasRotateMessage = hasRotateMessage;
+    this.hasRotateMessage = function(){
+        return hasRotateMessage;
+    };
 
     this.enableRotateMessage = function (properties) {
         hasRotateMessage = true;
