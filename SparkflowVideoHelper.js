@@ -31,7 +31,7 @@ var _SparkflowVideoHelper = function (sparkflow) {
         vid.appendChild(replayImageBtn1);
 
         var videoPlayer = $(".videoplayer");
-        videoPlayer.css("cursor","pointer");
+        videoPlayer.css("cursor", "pointer");
         video = videoPlayer.get(0);
         videoContainer = $('.videoplayer, [data-type="video"]');
         playButton = $('#PLAY_BUTTON');
@@ -53,8 +53,12 @@ var _SparkflowVideoHelper = function (sparkflow) {
 
         if (sparkflow.hasRotateMessage) setVideoOnRotateListener();
 
-        $("video").on("ended", function () {
-            playButton.css('display', 'block');
+        $(document).on('adEvent', function (e, data) {
+            if (data.type === "vst") {
+                $('video').on("ended", function () {
+                    playButton.css('display', 'block');
+                });
+            }
         });
     };
 
@@ -80,7 +84,7 @@ var _SparkflowVideoHelper = function (sparkflow) {
     };
 
     var hideVideoWhenMobileRotates = function () {
-        if (visible){
+        if (visible) {
             _this.pause();
             hideVideo();
         }
@@ -106,7 +110,8 @@ var _SparkflowVideoHelper = function (sparkflow) {
     };
 
     var runDefaulVideoExitAnimation = function () {
-        TweenMax.to(videoContainer, 0.5, {x: 0, opacity: 1,
+        TweenMax.to(videoContainer, 0.5, {
+            x: 0, opacity: 1,
             onComplete: function () {
                 hideVideo();
             }
