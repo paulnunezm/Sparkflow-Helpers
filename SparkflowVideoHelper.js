@@ -53,10 +53,6 @@ var _SparkflowVideoHelper = function (sparkflow) {
 
         if (sparkflow.hasRotateMessage) setVideoOnRotateListener();
 
-        $(document).on('adEvent', function (e, data) {
-            if (data.type === "vpa") sparkflow.setAutoClose();
-        });
-
         $("video").on("ended", function () {
             playButton.css('display', 'block');
         });
