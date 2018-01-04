@@ -2,10 +2,11 @@
 var addNewImageFrecuency = 1500
 
 var imgCount = 0,
-    intervalCounter = 0,
+    currentImageToAdd = 0,
+    sparkFlowImageDialogOpenAnimationTime = 1000,
     addImageInterval = setInterval(function () {
         openImageAdderDialog()
-        setTimeout(addImage, 1000)
+        setTimeout(addImage, sparkFlowImageDialogOpenAnimationTime)
     }, addNewImageFrecuency)
 
 function openImageAdderDialog() {
@@ -16,7 +17,7 @@ function openImageAdderDialog() {
 function addImage() {
     getFilteredImageCount()
     addImageToTheCanvas()
-    stopIntervalIfAllImagesAreAddedIncrementCounterIfNot()
+    stopIntervalIfAllImagesAreAdded()
     incrementCounter()
 }
 
@@ -29,16 +30,16 @@ function getFilteredImageCount() {
 
 function addImageToTheCanvas() {
     // If we save the jQuery object in a variable it stops working
-    $(".modal-body .asset-list .asset-name")[intervalCounter].click()
-    $(".modal-body .asset-list .asset-name")[intervalCounter].click()
+    $(".modal-body .asset-list .asset-name")[currentImageToAdd].click()
+    $(".modal-body .asset-list .asset-name")[currentImageToAdd].click()
 }
 
-function stopIntervalIfAllImagesAreAddedIncrementCounterIfNot() {
-    if (intervalCounter >= imgCount) {
+function stopIntervalIfAllImagesAreAdded() {
+    if (currentImageToAdd >= imgCount) {
         clearInterval(addImageInterval)
     }
 }
 
 function incrementCounter() {
-    intervalCounter++
+    currentImageToAdd++
 }
