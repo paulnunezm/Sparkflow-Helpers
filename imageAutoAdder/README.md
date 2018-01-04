@@ -17,9 +17,7 @@ multiple images into the Sparkflow canvas making it an easy peasy.
  6. Select the Sparkflow context, in order to the script to run on the platform:
        ![Select Sparkflow context](screenshots/selectSparkflowContext.gif?raw=true) 
 
- 7. Paste the script in the console:
-        ![Select Sparkflow context](screenshots/scriptInConsole.png?raw=true) 
-
+ 7. Paste the script in the console.
  8. Hit Enter and let it do it's work:
       ![Working script](screenshots/autoAddingImages.gif?raw=true) 
 
