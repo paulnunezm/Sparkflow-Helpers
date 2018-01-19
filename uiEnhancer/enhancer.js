@@ -1,3 +1,9 @@
+/*!
+ * Sparkflow UI Enhancer
+ * DATE: 2018-01-19
+ *
+ * @author: Abrahan Silverio
+ **/
 (function (window, $) {
   if (window.enhacedUI !== undefined) {
     console.warn('Already exits, or check if you are in the wrong console execution context.')
