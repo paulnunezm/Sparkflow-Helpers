@@ -14,6 +14,15 @@ As their names indicate these buttons are useful when you need to hide or show, 
 
 Sometimes the ID field of the inspector panel element is a bit small, this fix adds space in this field.
 
+### - Layers Previews
+![Open image window](screenshots/layersPreviews.png?raw=true)
+
+This helps to identify layer images when the names are not descriptive enough.
+
+### - Editor Elements Styles
+
+A couple of elements coloring to help to identify elements in the editor canvas.
+
 ### How to use:
 
 1. Copy the script from the ```enhancer.min.js``` file.
